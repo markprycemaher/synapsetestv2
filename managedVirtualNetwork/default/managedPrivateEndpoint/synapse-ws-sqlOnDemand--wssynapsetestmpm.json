@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--wssynapsetestmpm",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/5d0ea299-7dff-4878-a18e-10bfc0df8d8e/resourceGroups/testrs/providers/Microsoft.Synapse/workspaces/wssynapsetestmpm",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"wssynapsetestmpm-ondemand.cb95213b-a50b-4e93-b1ec-46071f0a503e.sql.azuresynapse.net"
+		]
+	}
+}
