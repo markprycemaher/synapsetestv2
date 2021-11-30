@@ -2,7 +2,7 @@
 	"name": "SQL script 6",
 	"properties": {
 		"content": {
-			"query": "SELECT TOP (100) [Column_1]\n,[Column_2]\n,[Partition_Column_2]\n FROM [lakedb2].[dbo].[sampletbl]\n\n insert into [lakedb2].[dbo].[sampletbl]\n values (1,2,3)",
+			"query": "SELECT TOP (100) [Column_1]\n\n,[Column_2]\n\n,[Partition_Column_2]\n\n FROM [lakedb2].[dbo].[sampletbl]\n\n\n insert into [lakedb2].[dbo].[sampletbl]\n values (1,2,3)",
 			"metadata": {
 				"language": "sql"
 			},
