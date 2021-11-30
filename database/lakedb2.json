@@ -1,0 +1,25 @@
+{
+	"name": "lakedb2",
+	"properties": {
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://fss@tpctestacc.dfs.core.windows.net/lakedb2",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "tpc-test-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 3,
+		"ObjectId": "1e8b84a4-b1b6-4b78-964a-b197cf4b1483",
+		"Name": "lakedb2",
+		"EntityType": "DATABASE"
+	},
+	"type": "DATABASE"
+}

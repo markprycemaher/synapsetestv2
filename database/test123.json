@@ -1,0 +1,25 @@
+{
+	"name": "test123",
+	"properties": {
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://streaming@csesynapseworkspace.dfs.core.windows.net/test",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "logs"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9f056cd7-280d-47ca-96e6-86c4b213528d",
+		"Name": "test123",
+		"EntityType": "DATABASE"
+	},
+	"type": "DATABASE"
+}
