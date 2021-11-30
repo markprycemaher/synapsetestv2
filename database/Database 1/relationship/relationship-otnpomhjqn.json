@@ -1,0 +1,26 @@
+{
+	"name": "relationship-otnpomhjqn",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-otnpomhjqn",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "InventoryValuationMethod",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InventoryValuationMethodId",
+				"ToColumnName": "InventoryValuationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"InventoryValuationMethod.cdm.json/InventoryValuationMethod\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"InventoryValuationMethodId\",\"toAttribute\":\"InventoryValuationMethodId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

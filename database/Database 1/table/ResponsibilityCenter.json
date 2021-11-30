@@ -1,0 +1,143 @@
+{
+	"name": "ResponsibilityCenter",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "ResponsibilityCenter",
+		"Description": "A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\n\nThe responsibility center id is quite often incorporated into the Ledger Account Number.",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "ResponsibilityCenterId",
+					"Description": "The unique identifier of a Responsibility Center.",
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterDescription",
+					"Description": "A description of the responsibility center.",
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterDescription"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 512,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterNote",
+					"Description": "A note, comment or additional information regarding the responsibility center.",
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterNote"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 1024,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "OrganizationId",
+					"Description": "The unique identifier of an organization.",
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "OrganizationId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterTypeId",
+					"Description": "The unique identifier of a Responsibility Center Type.",
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterTypeId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/ResponsibilityCenter",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/ResponsibilityCenter",
+				"Properties": {
+					"LinkedServiceName": "tpc-test-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ResponsibilityCenterId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterId\"},\"ResponsibilityCenterDescription\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterDescription\"},\"ResponsibilityCenterNote\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterNote\"},\"OrganizationId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"OrganizationId\"},\"ResponsibilityCenterTypeId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterTypeId\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ResponsibilityCenter\",\"path\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\"},\"description\":\"A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\\n\\nThe responsibility center id is quite often incorporated into the Ledger Account Number.\",\"primaryKey\":[\"ResponsibilityCenterId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"name\":\"ResponsibilityCenterId\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"ResponsibilityCenterDescription\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterDescription\"},\"dataType\":\"string\",\"dataTypeLength\":512},{\"type\":\"Existing\",\"name\":\"ResponsibilityCenterNote\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterNote\"},\"dataType\":\"string\",\"dataTypeLength\":1024},{\"type\":\"Existing\",\"name\":\"OrganizationId\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"OrganizationId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"ResponsibilityCenterTypeId\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterTypeId\"},\"dataType\":\"integer\"}]}}}",
+			"Description": "A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\n\nThe responsibility center id is quite often incorporated into the Ledger Account Number.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "ResponsibilityCenterId",
+			"spark.sql.sources.provider": "csv"
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,227 @@
+{
+	"name": "JournalEntryLineItem",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "JournalEntryLineItem",
+		"Description": "The Journal Entry is broken down into a series of Journal Entry Line Items. \n\nThe total amount of all Journal Entry Line Items for a Journal Entry must be 0 (I.e. the debits = credits).\n\nJournal entries are 'posted' to the ledger.",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "JournalId",
+					"Description": "The unique identifier of a Journal.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "JournalId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "JournalEntryId",
+					"Description": "The unique identifier of a Journal Entry.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "JournalEntryId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "JournalEntryLineItemId",
+					"Description": "The unique identifier of a Journal Entry Line Item.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "JournalEntryLineItemId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "JournalEntryLineItemDescription",
+					"Description": "A description of the journal entry line item.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "JournalEntryLineItemDescription"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 512,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "CreditOrDebitIndicator",
+					"Description": "Indicates whether the journal entity line item is a credit or debit.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "CreditOrDebitIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					}
+				},
+				{
+					"Name": "Amount",
+					"Description": "The amount either a credit or debit to the account.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "Amount"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					}
+				},
+				{
+					"Name": "LedgerId",
+					"Description": "The unique identifier of a Ledger.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "LedgerId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountNumber",
+					"Description": "The unique identifier of an Account.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "LedgerAccountNumber"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 16,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "PostingTimestamp",
+					"Description": "The timestamp of the posting of the journal entry to the Ledger Account.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "PostingTimestamp"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					}
+				},
+				{
+					"Name": "PostingNote",
+					"Description": "A note, comment or additional information regarding the ledger posting.",
+					"BaseAttributeReference": {
+						"Entity": "JournalEntryLineItem.cdm.json/JournalEntryLineItem",
+						"Name": "PostingNote"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 1024,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/JournalEntryLineItem",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/JournalEntryLineItem",
+				"Properties": {
+					"LinkedServiceName": "tpc-test-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"JournalId\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalId\"},\"JournalEntryId\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryId\"},\"JournalEntryLineItemId\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryLineItemId\"},\"JournalEntryLineItemDescription\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryLineItemDescription\"},\"CreditOrDebitIndicator\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"CreditOrDebitIndicator\"},\"Amount\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"Amount\"},\"LedgerId\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"LedgerId\"},\"LedgerAccountNumber\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"LedgerAccountNumber\"},\"PostingTimestamp\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"PostingTimestamp\"},\"PostingNote\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"PostingNote\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"JournalEntryLineItem\",\"path\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\"},\"description\":\"The Journal Entry is broken down into a series of Journal Entry Line Items. \\n\\nThe total amount of all Journal Entry Line Items for a Journal Entry must be 0 (I.e. the debits = credits).\\n\\nJournal entries are 'posted' to the ledger.\",\"primaryKey\":[\"JournalId\",\"JournalEntryId\",\"JournalEntryLineItemId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"name\":\"JournalId\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"JournalEntryId\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"JournalEntryLineItemId\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryLineItemId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"JournalEntryLineItemDescription\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"JournalEntryLineItemDescription\"},\"dataType\":\"string\",\"dataTypeLength\":512},{\"type\":\"Existing\",\"name\":\"CreditOrDebitIndicator\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"CreditOrDebitIndicator\"},\"dataType\":\"boolean\"},{\"type\":\"Existing\",\"name\":\"Amount\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"Amount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"scale\":2},{\"type\":\"Existing\",\"name\":\"LedgerId\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"LedgerId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"LedgerAccountNumber\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"LedgerAccountNumber\"},\"dataType\":\"string\",\"dataTypeLength\":16},{\"type\":\"Existing\",\"name\":\"PostingTimestamp\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"PostingTimestamp\"},\"dataType\":\"timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"name\":\"PostingNote\",\"attributeReference\":{\"entity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"name\":\"PostingNote\"},\"dataType\":\"string\",\"dataTypeLength\":1024}]}}}",
+			"Description": "The Journal Entry is broken down into a series of Journal Entry Line Items. \n\nThe total amount of all Journal Entry Line Items for a Journal Entry must be 0 (I.e. the debits = credits).\n\nJournal entries are 'posted' to the ledger.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "JournalId,JournalEntryId,JournalEntryLineItemId",
+			"spark.sql.sources.provider": "csv"
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}

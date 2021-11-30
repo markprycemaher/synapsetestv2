@@ -1,0 +1,42 @@
+{
+	"name": "relationship-suyymjpdfj",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-suyymjpdfj",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatementColumn",
+		"ToTableName": "FinancialStatementValue",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementColumnId",
+				"ToColumnName": "FinancialStatementColumnId"
+			},
+			{
+				"FromColumnName": "FinancialStatementId",
+				"ToColumnName": "FinancialStatementId"
+			},
+			{
+				"FromColumnName": "LegalEntityId",
+				"ToColumnName": "LegalEntityId"
+			},
+			{
+				"FromColumnName": "PeriodEndDate",
+				"ToColumnName": "PeriodEndDate"
+			},
+			{
+				"FromColumnName": "PeriodStartDate",
+				"ToColumnName": "PeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatementColumn.cdm.json/FinancialStatementColumn\",\"toEntity\":\"FinancialStatementValue.cdm.json/FinancialStatementValue\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementColumnId\",\"toAttribute\":\"FinancialStatementColumnId\"},{\"fromAttribute\":\"FinancialStatementId\",\"toAttribute\":\"FinancialStatementId\"},{\"fromAttribute\":\"LegalEntityId\",\"toAttribute\":\"LegalEntityId\"},{\"fromAttribute\":\"PeriodEndDate\",\"toAttribute\":\"PeriodEndDate\"},{\"fromAttribute\":\"PeriodStartDate\",\"toAttribute\":\"PeriodStartDate\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

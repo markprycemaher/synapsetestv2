@@ -1,0 +1,34 @@
+{
+	"name": "relationship-thhjrhkbwm",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-thhjrhkbwm",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SetOfFinancialStatements",
+		"ToTableName": "RelatedSetOfFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalEntityId",
+				"ToColumnName": "RelatedLegalEntityId"
+			},
+			{
+				"FromColumnName": "PeriodEndDate",
+				"ToColumnName": "RelatedPeriodEndDate"
+			},
+			{
+				"FromColumnName": "PeriodStartDate",
+				"ToColumnName": "RelatedPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"toEntity\":\"RelatedSetOfFinancialStatements.cdm.json/RelatedSetOfFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"LegalEntityId\",\"toAttribute\":\"RelatedLegalEntityId\"},{\"fromAttribute\":\"PeriodEndDate\",\"toAttribute\":\"RelatedPeriodEndDate\"},{\"fromAttribute\":\"PeriodStartDate\",\"toAttribute\":\"RelatedPeriodStartDate\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,30 @@
+{
+	"name": "relationship-xrkipngiwc",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-xrkipngiwc",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccount",
+		"ToTableName": "RelatedLedgerAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerAccountNumber",
+				"ToColumnName": "RelatedLedgerAccountNumber"
+			},
+			{
+				"FromColumnName": "LedgerId",
+				"ToColumnName": "RelatedLedgerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"toEntity\":\"RelatedLedgerAccount.cdm.json/RelatedLedgerAccount\",\"joinPairs\":[{\"fromAttribute\":\"LedgerAccountNumber\",\"toAttribute\":\"RelatedLedgerAccountNumber\"},{\"fromAttribute\":\"LedgerId\",\"toAttribute\":\"RelatedLedgerId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

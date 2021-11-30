@@ -1,0 +1,111 @@
+{
+	"name": "RelatedLedgerAccountBalanceRelationshipType",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "RelatedLedgerAccountBalanceRelationshipType",
+		"Description": "The nature of the relationship between two or more ledger account balances.",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "RelatedLedgerAccountBalanceRelationshipTypeId",
+					"Description": "The unique identifier of a Related Ledger Account Balance Relationship Type.",
+					"BaseAttributeReference": {
+						"Entity": "RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType",
+						"Name": "RelatedLedgerAccountBalanceRelationshipTypeId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "RelatedLedgerAccountBalanceRelationshipTypeName",
+					"Description": "The name of a Related Ledger Account Balance Relationship Type.",
+					"BaseAttributeReference": {
+						"Entity": "RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType",
+						"Name": "RelatedLedgerAccountBalanceRelationshipTypeName"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 128,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "RelatedLedgerAccountBalanceRelationshipTypeDescription",
+					"Description": "The description of a Related Ledger Account Balance Relationship Type.",
+					"BaseAttributeReference": {
+						"Entity": "RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType",
+						"Name": "RelatedLedgerAccountBalanceRelationshipTypeDescription"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 512,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/RelatedLedgerAccountBalanceRelationshipType",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/RelatedLedgerAccountBalanceRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "tpc-test-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RelatedLedgerAccountBalanceRelationshipTypeId\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeId\"},\"RelatedLedgerAccountBalanceRelationshipTypeName\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeName\"},\"RelatedLedgerAccountBalanceRelationshipTypeDescription\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedLedgerAccountBalanceRelationshipType\",\"path\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\"},\"description\":\"The nature of the relationship between two or more ledger account balances.\",\"primaryKey\":[\"RelatedLedgerAccountBalanceRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeId\",\"attributeReference\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeName\",\"attributeReference\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":128},{\"type\":\"Existing\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeDescription\",\"attributeReference\":{\"entity\":\"RelatedLedgerAccountBalanceRelationshipType.cdm.json/RelatedLedgerAccountBalanceRelationshipType\",\"name\":\"RelatedLedgerAccountBalanceRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":512}]}}}",
+			"Description": "The nature of the relationship between two or more ledger account balances.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "RelatedLedgerAccountBalanceRelationshipTypeId",
+			"spark.sql.sources.provider": "csv"
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}

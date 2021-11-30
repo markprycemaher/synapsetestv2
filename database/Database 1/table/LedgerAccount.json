@@ -1,0 +1,308 @@
+{
+	"name": "LedgerAccount",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "LedgerAccount",
+		"Description": "A Ledger Account is a separate record that is maintained for each category of asset, liability, permanent and temporary capital record.\n\nIt is an individual accounting record of increases and decreases in specific asset, liability, and stockholders' equity items.\n\nThe purpose of the account is to record the information about each business transaction.\n\nNote:\nThere can be more than one Chart of Accounts.",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"StorageDescriptor": {
+			"Columns": [
+				{
+					"Name": "LedgerId",
+					"Description": "The unique identifier of a Ledger.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountNumber",
+					"Description": "The unique identifier of a Ledger Account.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountNumber"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 16,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountName",
+					"Description": "The name of the ledger account.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountName"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 128,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountCreatedTimestamp",
+					"Description": "The timestamp that the ledger account was created or established.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountCreatedTimestamp"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountOpeningBalanceDate",
+					"Description": "The date of the ledger account opening balance.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountOpeningBalanceDate"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					}
+				},
+				{
+					"Name": "OpeningBalanceAmount",
+					"Description": "The beginning balance amount of the associated account.\n\nIn order for an account to exist it must have a balance that represents the net worth of the account at that time.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "OpeningBalanceAmount"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					}
+				},
+				{
+					"Name": "SubaccountIndicator",
+					"Description": "Indicates that the account is a subaccount of another account.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "SubaccountIndicator"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					}
+				},
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "CustomerId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
+				},
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "CustomerAccountId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
+				},
+				{
+					"Name": "AccountsPayableLegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "AccountsPayableLegalEntityId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "ProjectId",
+					"Description": "The unique identifier of a Project.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "ProjectId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterId",
+					"Description": "The unique identifier of a Responsibility Center.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "ResponsibilityCenterId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountCategoryId",
+					"Description": "The unique identifier of an Account Category.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountCategoryId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "LedgerAccountTypeId",
+					"Description": "The unique identifier of an Account Type.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "LedgerAccountTypeId"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccount.cdm.json/LedgerAccount",
+						"Name": "IsoCurrencyCode"
+					},
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				}
+			],
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/LedgerAccount",
+					"delimiter": ",",
+					"multiLine": "false",
+					"firstRowAsHeader": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://fss@tpctestacc.dfs.core.windows.net/Database 1/LedgerAccount",
+				"Properties": {
+					"LinkedServiceName": "tpc-test-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LedgerId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerId\"},\"LedgerAccountNumber\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountNumber\"},\"LedgerAccountName\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountName\"},\"LedgerAccountCreatedTimestamp\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountCreatedTimestamp\"},\"LedgerAccountOpeningBalanceDate\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountOpeningBalanceDate\"},\"OpeningBalanceAmount\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"OpeningBalanceAmount\"},\"SubaccountIndicator\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"SubaccountIndicator\"},\"CustomerId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"CustomerId\"},\"CustomerAccountId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"CustomerAccountId\"},\"AccountsPayableLegalEntityId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"AccountsPayableLegalEntityId\"},\"ProjectId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"ProjectId\"},\"ResponsibilityCenterId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"ResponsibilityCenterId\"},\"LedgerAccountCategoryId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountCategoryId\"},\"LedgerAccountTypeId\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountTypeId\"},\"IsoCurrencyCode\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"IsoCurrencyCode\"}}}"
+			},
+			"Compressed": false,
+			"IsStoredAsSubdirectories": false
+		},
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LedgerAccount\",\"path\":\"LedgerAccount.cdm.json/LedgerAccount\"},\"description\":\"A Ledger Account is a separate record that is maintained for each category of asset, liability, permanent and temporary capital record.\\n\\nIt is an individual accounting record of increases and decreases in specific asset, liability, and stockholders' equity items.\\n\\nThe purpose of the account is to record the information about each business transaction.\\n\\nNote:\\nThere can be more than one Chart of Accounts.\",\"primaryKey\":[\"LedgerId\",\"LedgerAccountNumber\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"name\":\"LedgerId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"LedgerAccountNumber\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountNumber\"},\"dataType\":\"string\",\"dataTypeLength\":16},{\"type\":\"Existing\",\"name\":\"LedgerAccountName\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountName\"},\"dataType\":\"string\",\"dataTypeLength\":128},{\"type\":\"Existing\",\"name\":\"LedgerAccountCreatedTimestamp\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountCreatedTimestamp\"},\"dataType\":\"timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"name\":\"LedgerAccountOpeningBalanceDate\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountOpeningBalanceDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\"},{\"type\":\"Existing\",\"name\":\"OpeningBalanceAmount\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"OpeningBalanceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"scale\":2},{\"type\":\"Existing\",\"name\":\"SubaccountIndicator\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"SubaccountIndicator\"},\"dataType\":\"boolean\"},{\"type\":\"Existing\",\"name\":\"CustomerId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"CustomerId\"},\"dataType\":\"long\"},{\"type\":\"Existing\",\"name\":\"CustomerAccountId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\"},{\"type\":\"Existing\",\"name\":\"AccountsPayableLegalEntityId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"AccountsPayableLegalEntityId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"ProjectId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"ProjectId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"ResponsibilityCenterId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"ResponsibilityCenterId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"LedgerAccountCategoryId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountCategoryId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"LedgerAccountTypeId\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"LedgerAccountTypeId\"},\"dataType\":\"integer\"},{\"type\":\"Existing\",\"name\":\"IsoCurrencyCode\",\"attributeReference\":{\"entity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3}]}}}",
+			"Description": "A Ledger Account is a separate record that is maintained for each category of asset, liability, permanent and temporary capital record.\n\nIt is an individual accounting record of increases and decreases in specific asset, liability, and stockholders' equity items.\n\nThe purpose of the account is to record the information about each business transaction.\n\nNote:\nThere can be more than one Chart of Accounts.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LedgerId,LedgerAccountNumber",
+			"spark.sql.sources.provider": "csv"
+		},
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false
+	},
+	"type": "TABLE"
+}

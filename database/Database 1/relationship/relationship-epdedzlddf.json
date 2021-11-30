@@ -1,0 +1,26 @@
+{
+	"name": "relationship-epdedzlddf",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-epdedzlddf",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalAdjustingEntryType",
+		"ToTableName": "JournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalAdjustingEntryTypeId",
+				"ToColumnName": "JournalAdjustingEntryTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalAdjustingEntryType.cdm.json/JournalAdjustingEntryType\",\"toEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"JournalAdjustingEntryTypeId\",\"toAttribute\":\"JournalAdjustingEntryTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

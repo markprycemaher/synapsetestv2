@@ -1,0 +1,26 @@
+{
+	"name": "relationship-dewtvztscl",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-dewtvztscl",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalTransactionType",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalTransactionTypeId",
+				"ToColumnName": "JournalTransactionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalTransactionType.cdm.json/JournalTransactionType\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"JournalTransactionTypeId\",\"toAttribute\":\"JournalTransactionTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,30 @@
+{
+	"name": "relationship-xwlkuuvnbx",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-xwlkuuvnbx",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalEntry",
+		"ToTableName": "RelatedJournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalEntryId",
+				"ToColumnName": "JournalEntryId"
+			},
+			{
+				"FromColumnName": "JournalId",
+				"ToColumnName": "JournalId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"toEntity\":\"RelatedJournalEntry.cdm.json/RelatedJournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"JournalEntryId\",\"toAttribute\":\"JournalEntryId\"},{\"fromAttribute\":\"JournalId\",\"toAttribute\":\"JournalId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,30 @@
+{
+	"name": "relationship-yebgvhdolk",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-yebgvhdolk",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalEntry",
+		"ToTableName": "RelatedJournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalEntryId",
+				"ToColumnName": "RelatedJournalEntryId"
+			},
+			{
+				"FromColumnName": "JournalId",
+				"ToColumnName": "RelatedJournalId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"toEntity\":\"RelatedJournalEntry.cdm.json/RelatedJournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"JournalEntryId\",\"toAttribute\":\"RelatedJournalEntryId\"},{\"fromAttribute\":\"JournalId\",\"toAttribute\":\"RelatedJournalId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

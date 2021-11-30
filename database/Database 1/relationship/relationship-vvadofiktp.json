@@ -1,0 +1,38 @@
+{
+	"name": "relationship-vvadofiktp",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-vvadofiktp",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatement",
+		"ToTableName": "RelatedFinancialStatement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementId",
+				"ToColumnName": "RelatedFinancialStatementId"
+			},
+			{
+				"FromColumnName": "LegalEntityId",
+				"ToColumnName": "RelatedLegalEntityId"
+			},
+			{
+				"FromColumnName": "PeriodEndDate",
+				"ToColumnName": "RelatedPeriodEndDate"
+			},
+			{
+				"FromColumnName": "PeriodStartDate",
+				"ToColumnName": "RelatedPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatement.cdm.json/FinancialStatement\",\"toEntity\":\"RelatedFinancialStatement.cdm.json/RelatedFinancialStatement\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementId\",\"toAttribute\":\"RelatedFinancialStatementId\"},{\"fromAttribute\":\"LegalEntityId\",\"toAttribute\":\"RelatedLegalEntityId\"},{\"fromAttribute\":\"PeriodEndDate\",\"toAttribute\":\"RelatedPeriodEndDate\"},{\"fromAttribute\":\"PeriodStartDate\",\"toAttribute\":\"RelatedPeriodStartDate\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

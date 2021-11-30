@@ -1,0 +1,26 @@
+{
+	"name": "relationship-zwawztyulu",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-zwawztyulu",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Auditor",
+		"ToTableName": "AuditorReport",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AuditorId",
+				"ToColumnName": "AuditorId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Auditor.cdm.json/Auditor\",\"toEntity\":\"AuditorReport.cdm.json/AuditorReport\",\"joinPairs\":[{\"fromAttribute\":\"AuditorId\",\"toAttribute\":\"AuditorId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

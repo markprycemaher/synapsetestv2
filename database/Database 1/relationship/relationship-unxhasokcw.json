@@ -1,0 +1,30 @@
+{
+	"name": "relationship-unxhasokcw",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-unxhasokcw",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFrameworkStandard",
+		"ToTableName": "NotesToFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkId",
+				"ToColumnName": "AccountingFrameworkId"
+			},
+			{
+				"FromColumnName": "AccountingFrameworkStandardId",
+				"ToColumnName": "AccountingFrameworkStandardId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFrameworkStandard.cdm.json/AccountingFrameworkStandard\",\"toEntity\":\"NotesToFinancialStatements.cdm.json/NotesToFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkId\",\"toAttribute\":\"AccountingFrameworkId\"},{\"fromAttribute\":\"AccountingFrameworkStandardId\",\"toAttribute\":\"AccountingFrameworkStandardId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

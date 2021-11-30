@@ -1,0 +1,34 @@
+{
+	"name": "relationship-bfdfbuxbpf",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-bfdfbuxbpf",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LineOfCredit",
+		"ToTableName": "LineOfCreditDraw",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalEntityId",
+				"ToColumnName": "LegalEntityId"
+			},
+			{
+				"FromColumnName": "LineOfCreditPeriodStartDate",
+				"ToColumnName": "LineOfCreditPeriodStartDate"
+			},
+			{
+				"FromColumnName": "LineOfCreditProvidingPartyId",
+				"ToColumnName": "LineOfCreditProvidingPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"toEntity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"joinPairs\":[{\"fromAttribute\":\"LegalEntityId\",\"toAttribute\":\"LegalEntityId\"},{\"fromAttribute\":\"LineOfCreditPeriodStartDate\",\"toAttribute\":\"LineOfCreditPeriodStartDate\"},{\"fromAttribute\":\"LineOfCreditProvidingPartyId\",\"toAttribute\":\"LineOfCreditProvidingPartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

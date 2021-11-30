@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ksnepoqjmt",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-ksnepoqjmt",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatementType",
+		"ToTableName": "FinancialStatement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementTypeId",
+				"ToColumnName": "FinancialStatementTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatementType.cdm.json/FinancialStatementType\",\"toEntity\":\"FinancialStatement.cdm.json/FinancialStatement\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementTypeId\",\"toAttribute\":\"FinancialStatementTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

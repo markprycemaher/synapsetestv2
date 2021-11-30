@@ -1,0 +1,34 @@
+{
+	"name": "relationship-dvzytqpens",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-dvzytqpens",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccountBalance",
+		"ToTableName": "RelatedLedgerAccountBalance",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerAccountNumber",
+				"ToColumnName": "RelatedLedgerAccountNumber"
+			},
+			{
+				"FromColumnName": "LedgerId",
+				"ToColumnName": "RelatedLedgerId"
+			},
+			{
+				"FromColumnName": "Timestamp",
+				"ToColumnName": "RelatedTimestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccountBalance.cdm.json/LedgerAccountBalance\",\"toEntity\":\"RelatedLedgerAccountBalance.cdm.json/RelatedLedgerAccountBalance\",\"joinPairs\":[{\"fromAttribute\":\"LedgerAccountNumber\",\"toAttribute\":\"RelatedLedgerAccountNumber\"},{\"fromAttribute\":\"LedgerId\",\"toAttribute\":\"RelatedLedgerId\"},{\"fromAttribute\":\"Timestamp\",\"toAttribute\":\"RelatedTimestamp\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

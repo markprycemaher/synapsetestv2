@@ -1,0 +1,26 @@
+{
+	"name": "relationship-yrzrvpijde",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-yrzrvpijde",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DepreciationMethod",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepreciationMethodId",
+				"ToColumnName": "DepreciationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DepreciationMethod.cdm.json/DepreciationMethod\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"DepreciationMethodId\",\"toAttribute\":\"DepreciationMethodId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

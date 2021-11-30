@@ -1,0 +1,30 @@
+{
+	"name": "relationship-dxpinxifmj",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-dxpinxifmj",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalEntry",
+		"ToTableName": "JournalEntryLineItem",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalEntryId",
+				"ToColumnName": "JournalEntryId"
+			},
+			{
+				"FromColumnName": "JournalId",
+				"ToColumnName": "JournalId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"toEntity\":\"JournalEntryLineItem.cdm.json/JournalEntryLineItem\",\"joinPairs\":[{\"fromAttribute\":\"JournalEntryId\",\"toAttribute\":\"JournalEntryId\"},{\"fromAttribute\":\"JournalId\",\"toAttribute\":\"JournalId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

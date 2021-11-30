@@ -1,0 +1,26 @@
+{
+	"name": "relationship-trtpdgmljy",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-trtpdgmljy",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CashFlowStatementPreparationMethod",
+		"ToTableName": "CashFlowStatement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CashFlowStatementPreparationMethodId",
+				"ToColumnName": "CashFlowStatementPreparationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CashFlowStatementPreparationMethod.cdm.json/CashFlowStatementPreparationMethod\",\"toEntity\":\"CashFlowStatement.cdm.json/CashFlowStatement\",\"joinPairs\":[{\"fromAttribute\":\"CashFlowStatementPreparationMethodId\",\"toAttribute\":\"CashFlowStatementPreparationMethodId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

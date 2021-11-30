@@ -1,0 +1,26 @@
+{
+	"name": "relationship-xboelfrqro",
+	"properties": {
+		"Namespace": {
+			"DatabaseName": "Database 1"
+		},
+		"Name": "relationship-xboelfrqro",
+		"EntityType": "RELATIONSHIP",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Ledger",
+		"ToTableName": "RelatedLedger",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerId",
+				"ToColumnName": "RelatedLedgerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Ledger.cdm.json/Ledger\",\"toEntity\":\"RelatedLedger.cdm.json/RelatedLedger\",\"joinPairs\":[{\"fromAttribute\":\"LedgerId\",\"toAttribute\":\"RelatedLedgerId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}
