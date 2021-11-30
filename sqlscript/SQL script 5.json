@@ -2,7 +2,7 @@
 	"name": "SQL script 5",
 	"properties": {
 		"content": {
-			"query": "SELECT TOP (100) [CustomerId]\n,[CustomerEstablishedDate]\n,[CustomerTypeId]\n,[ResponsibilityCenterId]\n,[LedgerId]\n,[LedgerAccountNumber]\n,[CustomerNote]\n,[PartyId]\n,[GlobalLocationNumber]\n FROM [Database 1].[dbo].[Customer]",
+			"query": "SELECT TOP (100) [CustomerId]\n,[CustomerEstablishedDate]\n,[CustomerTypeId]\n,[ResponsibilityCenterId]\n,[LedgerId]\n,[LedgerAccountNumber]\n,[CustomerNote]\n,[PartyId]\n,[GlobalLocationNumber]\n\n\n\n\n\n\n\n\n FROM [Database 1].[dbo].[Customer]",
 			"metadata": {
 				"language": "sql"
 			},
