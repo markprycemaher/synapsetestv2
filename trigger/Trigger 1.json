@@ -1,0 +1,26 @@
+{
+	"name": "Trigger 1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline 1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/foo/blobs/*",
+			"blobPathEndsWith": "*",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/7e416de3-c506-4776-8270-83fd73c6cc37/resourceGroups/SynapseQandA/providers/Microsoft.Storage/storageAccounts/csempmstorage",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}
